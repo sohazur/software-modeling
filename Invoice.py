@@ -1,38 +1,35 @@
 class Invoice:
-    def __init__(self, invoice_id, service_id, invoice_date, taxes, discount, total):
-        self.invoice_id = invoice_id
-        self.service_id = service_id
-        self.invoice_date = invoice_date
-        self.taxes = taxes
-        self.discount = discount
-        self.total = total
+    def __init__(self, invoiceId, customerId, invoiceDate, taxes, discount):
+        self.__invoiceId = invoiceId
+        self.__customerId = customerId
+        self.__invoiceDate = invoiceDate
+        self.__taxes = taxes
+        self.__discount = discount
+        self.__services = []
 
-    def get_invoice_id(self):
-        return self.invoice_id
+    def getInvoiceId(self):
+        return self.__invoiceId
 
-    def get_service_id(self):
-        return self.service_id
+    def getCustomerId(self):
+        return self.__customerId
 
-    def get_invoice_date(self):
-        return self.invoice_date
+    def getInvoiceDate(self):
+        return self.__invoiceDate
 
-    def get_taxes(self):
-        return self.taxes
+    def getTaxes(self):
+        return self.__taxes
 
-    def get_discount(self):
-        return self.discount
+    def setTaxes(self, taxes):
+        self.__taxes = taxes
 
-    def get_total(self):
-        return self.total
+    def getDiscount(self):
+        return self.__discount
 
-    def set_taxes(self, taxes):
-        self.taxes = taxes
+    def setDiscount(self, discount):
+        self.__discount = discount
 
-    def set_discount(self, discount):
-        self.discount = discount
+    def getServices(self):
+        return self.__services
 
-    def set_total(self, total):
-        self.total = total
-
-    def calculate_total(self):
-        return self.total + self.taxes - self.discount
+    def addService(self, service):
+        self.__services.append(service)

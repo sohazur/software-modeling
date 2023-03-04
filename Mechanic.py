@@ -10,16 +10,16 @@ class Mechanic:
     def getMechanicId(self):
         return self.__mechanicId
 
-    def getfirstName(self):
+    def getFirstName(self):
         return self.__firstName
 
-    def setfirstName(self, firstName):
+    def setFirstName(self, firstName):
         self.__firstName = firstName
         
-    def getlastName(self):
+    def getLastName(self):
             return self.__lastName
 
-    def setlastName(self, lastName):
+    def setLastName(self, lastName):
         self.__lastName = lastName
 
     def getPhoneNumber(self):

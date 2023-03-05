@@ -28,15 +28,15 @@ mechanic2 = Mechanic(2, 'Kevin', 'P', '555-555-5555', '322 New Street')
 
 # Create service objects for customer 1 and 2
 services = [
-Service(1, customer.getCustomerId(), vehicle.getVehicleId(), ServiceType.DIAGNOSTICS, '2022-03-13', mechanic),
-Service(2, customer.getCustomerId(), vehicle.getVehicleId(), ServiceType.OIL_REPLACEMENT, '2022-03-13', mechanic),
-Service(3, customer.getCustomerId(), vehicle.getVehicleId(), ServiceType.OIL_FILTER_PARTS, '2022-03-13', mechanic),
-Service(4, customer.getCustomerId(), vehicle.getVehicleId(), ServiceType.TIRE_REPLACEMENT, '2022-03-13', mechanic),
-Service(5, customer.getCustomerId(), vehicle.getVehicleId(), ServiceType.TIRE, '2022-03-13'),
-Service(6, customer.getCustomerId(), vehicle.getVehicleId(), ServiceType.TIRE, '2022-03-13'),
-Service(7, customer2.getCustomerId(), vehicle2.getVehicleId(), ServiceType.TIRE, '2022-03-13'),
-Service(8, customer2.getCustomerId(), vehicle2.getVehicleId(), ServiceType.TIRE, '2022-03-13'),
-Service(9, customer2.getCustomerId(), vehicle2.getVehicleId(), ServiceType.OIL_FILTER_PARTS, '2022-03-13'),
+Service(1, customer.getCustomerId(), vehicle.getVehicleId(), ServiceType.DIAGNOSTICS, 'March 13, 2022', mechanic),
+Service(2, customer.getCustomerId(), vehicle.getVehicleId(), ServiceType.OIL_REPLACEMENT, 'March 13, 2022', mechanic),
+Service(3, customer.getCustomerId(), vehicle.getVehicleId(), ServiceType.OIL_FILTER_PARTS, 'March 13, 2022', mechanic),
+Service(4, customer.getCustomerId(), vehicle.getVehicleId(), ServiceType.TIRE_REPLACEMENT, 'March 13, 2022', mechanic),
+Service(5, customer.getCustomerId(), vehicle.getVehicleId(), ServiceType.TIRE, 'March 13, 2022'),
+Service(6, customer.getCustomerId(), vehicle.getVehicleId(), ServiceType.TIRE, 'March 13, 2022'),
+Service(7, customer2.getCustomerId(), vehicle2.getVehicleId(), ServiceType.TIRE, 'March 13, 2022'),
+Service(8, customer2.getCustomerId(), vehicle2.getVehicleId(), ServiceType.TIRE, 'March 13, 2022'),
+Service(9, customer2.getCustomerId(), vehicle2.getVehicleId(), ServiceType.OIL_FILTER_PARTS, 'March 13, 2022'),
 ]
 
 # Set mechanic for services
@@ -58,7 +58,7 @@ mechanic2.addService(services[7])
 mechanic.addService(services[8])
     
 # Create invoice objects
-invoice = Invoice(1, customer.getCustomerId(), '2022-03-13', 21.5, 11.5)
+invoice = Invoice(1, customer.getCustomerId(), 'March 13, 2022', 21.5, 11.5)
 invoice.addService(services[0])
 invoice.addService(services[1])
 invoice.addService(services[2])
@@ -66,7 +66,7 @@ invoice.addService(services[3])
 invoice.addService(services[4])
 invoice.addService(services[5])
 
-invoice2 = Invoice(2, customer2.getCustomerId(), '2022-03-13', 10.5, 9.5)
+invoice2 = Invoice(2, customer2.getCustomerId(), 'March 13, 2022', 10.5, 9.5)
 invoice2.addService(services[6])
 invoice2.addService(services[7])
 invoice2.addService(services[8])

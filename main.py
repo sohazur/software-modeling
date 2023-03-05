@@ -14,10 +14,10 @@ customer.setLastName('Jones')
 customer2 = Customer(2, 'John', 'Smith', '816-897-9862', '322 New Street')
 
 # Create vehicle objects
-vehicle = Vehicle('AD-89034', 'Nissan', 'Altima', 'Silver')
+vehicle = Vehicle('AD-89034', 'Nissan', 'Altima', 'Silver', 2014)
 vehicle.setColor('Silver')
 
-vehicle2 = Vehicle('AD-84512', 'Mitshubishu', 'Attrage', 'Silver')
+vehicle2 = Vehicle('AD-84512', 'Mitshubishu', 'Attrage', 'Silver', 2017)
 
 # Create two mechanic object
 mechanic = Mechanic(1, 'Hans', 'K', '555-555-5555', '123 Main Street')
@@ -100,10 +100,10 @@ def generateInvoice(customer, vehicle, invoice, services):
             print(service.getMechanic().getFirstName(), service.getMechanic().getLastName(), end=', ')
     print()
     # Print the vehicle information
-    print('Vehicle Type:', vehicle.getMake(), vehicle.getModel(), '(', vehicle.getVehicleId(), ')')
+    print('Vehicle Type:', vehicle.getMake(), vehicle.getModel(), '(', vehicle.getYear(), ')')
     print('Vehicle Color:', vehicle.getColor())
-    print()
     print('Vehicle ID:', vehicle.getVehicleId())
+    print()
     
     print('Services')
     # Print the services for the customer

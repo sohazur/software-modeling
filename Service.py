@@ -1,11 +1,11 @@
 from enum import Enum
 
 class ServiceType(Enum):
-    DIAGNOSTICS = 15.00
-    OIL_REPLACEMENT = 120.00
-    OIL_FILTER_PARTS = 35.00
-    TIRE_REPLACEMENT = 100.00
-    TIRE = 160.00
+    DIAGNOSTICS = 1
+    OIL_REPLACEMENT = 2
+    OIL_FILTER_PARTS = 3
+    TIRE_REPLACEMENT = 4
+    TIRE = 5
 
 class Service:
     def __init__(self, serviceId, customerId, vehicleId, serviceType, serviceDate, mechanic=None):
@@ -29,8 +29,16 @@ class Service:
         return self.__serviceType
 
     def getServiceCost(self):
-        return self.__serviceType.value
-
+        if self.__serviceType == 1:
+            return 15.0
+        elif self.__serviceType == 2:
+            return 120.0
+        elif self.__serviceType == 3:
+            return 35.0
+        elif self.__serviceType == 4:
+            return 50.0
+        elif self.__serviceType == 5:
+            return 80.0
     def getServiceDate(self):
         return self.__serviceDate
 

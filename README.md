@@ -4,7 +4,7 @@ Software Modelling - UML Use Case and UML Class diagrams
 
 # Car Garage Billing Management System
 
-This is a Python program for managing billing at a car garage. It includes classes for customers, vehicles, services, mechanics, and invoices. The program uses a GUI to allow users to input and display data.
+This is a Python program for managing billing at a car garage. It includes classes for customers, vehicles, services, mechanics, and invoices.
 
 ## Installation
 

@@ -85,27 +85,27 @@ def generateInvoice(customer, vehicle, invoice, services):
             customer_services.append(service)
 
     # Print the invoice
-    print('Invoice')
-    print('Invoice Number:', invoice.getInvoiceId())
+    print("\033[1m" + 'Invoice' + "\033[0m")
+    print("\033[1m" + 'Invoice Number:' + "\033[0m", invoice.getInvoiceId())
     print()
-    print('Customer Name:', customer.getFirstName(), customer.getLastName())
-    print('Cell Phone Number:', customer.getPhoneNumber())
-    print('Date:', invoice.getInvoiceDate())
+    print("\033[1m" + 'Customer Name:' + "\033[0m", customer.getFirstName(), customer.getLastName())
+    print("\033[1m" + 'Cell Phone Number:' + "\033[0m", customer.getPhoneNumber())
+    print("\033[1m" + 'Date:' + "\033[0m", invoice.getInvoiceDate())
     # Print the mechanics names for the customer
     mechanics = []
-    print('Mechanic Name: ', end='')
+    print("\033[1m" + 'Mechanic Name: ' + "\033[0m", end='')
     for service in customer_services:
         if service.getMechanic() not in mechanics:
             mechanics.append(service.getMechanic())
             print(service.getMechanic().getFirstName(), service.getMechanic().getLastName(), end=', ')
     print()
     # Print the vehicle information
-    print('Vehicle Type:', vehicle.getMake(), vehicle.getModel(), '(', vehicle.getYear(), ')')
-    print('Vehicle Color:', vehicle.getColor())
-    print('Vehicle ID:', vehicle.getVehicleId())
+    print("\033[1m" + 'Vehicle Type:' + "\033[0m", vehicle.getMake(), vehicle.getModel(), '(', vehicle.getYear(), ')')
+    print("\033[1m" + 'Vehicle Color:' + "\033[0m", vehicle.getColor())
+    print("\033[1m" + 'Vehicle ID:' + "\033[0m", vehicle.getVehicleId())
     print()
     
-    print('Services')
+    print("\033[1m" + 'Services' + "\033[0m")
     # Print the services for the customer
     service_costs = {
         'DIAGNOSTICS' : 15.0,
@@ -130,7 +130,7 @@ def generateInvoice(customer, vehicle, invoice, services):
     print('Taxes:', invoice.getTaxes())
     print('Total:', subtotal)
     print('Discount:', invoice.getDiscount())
-    print('Final Amount:', total)
+    print("\033[1m" + 'Final Amount:' + "\033[0m", total)
 
 # Call the function
 if __name__ == '__main__':

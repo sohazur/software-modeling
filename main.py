@@ -107,6 +107,13 @@ def generateInvoice(customer, vehicle, invoice, services):
     
     print('Services')
     # Print the services for the customer
+    service_costs = {
+        'DIAGNOSTICS' : 15.0,
+        'OIL_REPLACEMENT': 120.0,
+        'OIL_FILTER_PARTS': 35.0,
+        'TIRE_REPLACEMENT': 50.0,
+        'TIRE': 80.0
+    }
     service_count = {}
     for service in customer_services:
         if service.getServiceType() not in service_count:
@@ -116,9 +123,9 @@ def generateInvoice(customer, vehicle, invoice, services):
     # Print the services with quantity and the price
     for service in service_count:
         if service_count[service] > 1:
-            print(service.name, '(',service_count[service],')', 'Price:', service.value * service_count[service])
+            print(service.name, '(',service_count[service],')', 'Price:', service_count[service] * service_costs[service.name])
         else:
-            print(service.name, 'Price:', service.value)
+            print(service.name, 'Price:', service_costs[service.name])
     # Print the subtotal, taxes, discount and total
     print('Taxes:', invoice.getTaxes())
     print('Total:', subtotal)

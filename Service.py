@@ -29,15 +29,15 @@ class Service:
         return self.__serviceType
 
     def getServiceCost(self):
-        if self.__serviceType == 1:
+        if self.__serviceType.value == 1:
             return 15.0
-        elif self.__serviceType == 2:
+        elif self.__serviceType.value == 2:
             return 120.0
-        elif self.__serviceType == 3:
+        elif self.__serviceType.value == 3:
             return 35.0
-        elif self.__serviceType == 4:
+        elif self.__serviceType.value == 4:
             return 50.0
-        elif self.__serviceType == 5:
+        elif self.__serviceType.value == 5:
             return 80.0
     def getServiceDate(self):
         return self.__serviceDate
